@@ -120,16 +120,17 @@ ActiveRecord::Schema.define(version: 20161011040243) do
   create_table "scores", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "home_score"
     t.integer  "away_score"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.float    "rate_score", limit: 24
   end
 
   create_table "sessions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "session_name"
+    t.string   "season_name"
     t.date     "start_date"
     t.date     "end_date"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -140,7 +141,6 @@ ActiveRecord::Schema.define(version: 20161011040243) do
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
     t.string   "password_digest"
-    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
   add_foreign_key "bets", "matches"

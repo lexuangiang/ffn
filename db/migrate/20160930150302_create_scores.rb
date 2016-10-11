@@ -6,5 +6,6 @@ class CreateScores < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
+    add_column :scores, :rate_score, :float
   end
 end
