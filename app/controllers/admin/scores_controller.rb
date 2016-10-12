@@ -1,4 +1,5 @@
 class Admin::ScoresController < ApplicationController
+  layout "admin_application"
   before_action :logged_in_user, :verify_admin
   before_action :find_score, except: [:create, :new, :index]
 
@@ -18,7 +19,7 @@ class Admin::ScoresController < ApplicationController
     @score = Score.new score_params
     if @score.save
       flash[:success] = t "score.create_success"
-      redirect_to @score
+      redirect_to admin_scores_path
     else
       @errors_count = @score.errors.size
       render :new

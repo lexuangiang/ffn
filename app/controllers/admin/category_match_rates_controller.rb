@@ -1,4 +1,5 @@
 class Admin::CategoryMatchRatesController < ApplicationController
+  layout "admin_application"
   before_action :logged_in_user
   before_action :load_category_rates, only: [:edit, :show, :update]
 
@@ -18,7 +19,7 @@ class Admin::CategoryMatchRatesController < ApplicationController
     @load_category_rates = CategoryMatchRate.new category_params
     if @load_category_rates.save
       flash[:success] = t "category_rates.create_success"
-      redirect_to root_path
+      redirect_to admin_category_match_rates_path
     else
       flash[:warning] = t "category_rates.create_fail"
       errors_count

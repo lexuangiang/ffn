@@ -1,4 +1,5 @@
 class Admin::RatesController < ApplicationController
+  layout "admin_application"
   before_action :logged_in_user, :verify_admin
   before_action :load_rate, except: [:index, :new, :create]
   before_action :prepare_form_data, except: [:index, :show]
@@ -18,7 +19,7 @@ class Admin::RatesController < ApplicationController
     @rate = Rate.new rate_params
     if @rate.save
       flash[:success] = t "rate.create_success"
-      redirect_to @rate
+      redirect_to admin_rates_path
     else
       flash[:warning] = t "rate.create_fail"
       errors_count

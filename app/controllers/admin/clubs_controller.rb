@@ -1,4 +1,5 @@
 class Admin::ClubsController < ApplicationController
+  layout "admin_application"
   before_action :logged_in_user, :verify_admin
   before_action :find_club, except: [:create, :new, :index]
 
@@ -19,7 +20,7 @@ class Admin::ClubsController < ApplicationController
   def create
     @club = Club.new club_params
     if @club.save
-      redirect_to @club
+      redirect_to admin_clubs_path
     else
       @errors_count = @club.errors.size
       render :new
