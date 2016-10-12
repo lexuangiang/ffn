@@ -17,6 +17,11 @@ en:
   setting: "Settings"
   error: "The form contains Errors"
   players: "PLAYERS"
+  matchs: "MATCHS"
+  rates: "RATES"
+  new: "NEWS"
+  category_new: "CATALOGY NEWS"
+  category_match: "CATALOGY MATCH RATES"
   admin:
     adminpage: "Admin Page"
     admin: "ADMIN"
@@ -107,6 +112,7 @@ en:
     create_fail: "Create fail"
     edit_success: "Update success"
     edit_fail: "Update fails"
+    new: "New category match rates"
   rate:
     create_success: "Create rate success !"
     create_fail: "Create rate fail !"
@@ -121,6 +127,7 @@ en:
     sure: "Are you sure ?"
     deleted: "Deleted"
     delete_fail: "Deleted fail"
+    new: "New rate"
   category_news:
     create_success: "Create category news success !"
     create_fail: "Create category news fail !"
@@ -135,6 +142,7 @@ en:
     delete: "Delete"
     sure: "Do you want to delete it ?"
     name: "Category news name"
+    new: "New category news"
   news:
     create_success: "Create news success !"
     create_fail: "Create news fail !"
