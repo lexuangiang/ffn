@@ -50,7 +50,7 @@ class Admin::ScoresController < ApplicationController
 
   private
   def score_params
-    params.require(:score).permit :home_score, :away_score
+    params.require(:score).permit :home_score, :away_score, :rate_score
   end
 
   def find_score

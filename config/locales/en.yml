@@ -108,6 +108,7 @@ en:
     deleted: "Score Deleted"
     destroy_fail: "Score destroy fail"
     new: "Create Score"
+    rate_score: "Rate Score"
   layout:
     about: "About Us"
     about_content: "We are Giang & DOAN !^^!"
