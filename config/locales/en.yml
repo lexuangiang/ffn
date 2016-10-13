@@ -22,6 +22,7 @@ en:
   new: "NEWS"
   category_new: "CATALOGY NEWS"
   category_match: "CATALOGY MATCH RATES"
+  bet: "BETS"
   admin:
     adminpage: "Admin Page"
     admin: "ADMIN"

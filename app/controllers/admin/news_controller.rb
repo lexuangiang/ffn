@@ -1,4 +1,5 @@
 class Admin::NewsController < ApplicationController
+  layout "admin_application"
   before_action :logged_in_user, :verify_admin
   before_action :load_news, except: [:index, :new, :create]
   before_action :load_category_news, except: [:index, :show]
@@ -19,7 +20,7 @@ class Admin::NewsController < ApplicationController
     @news = News.new news_params
     if @news.save
       flash[:success] = t "news.create_success"
-      redirect_to @news
+      redirect_to admin_news_index_path
     else
       error_count
       flash[:warning] = t "news.create_fail"

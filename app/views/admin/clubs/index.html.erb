@@ -1,5 +1,7 @@
-<%= link_to t("club.new"), new_admin_club_path %>
+
 <div class="row">
+  <div class="col-md-10" >
+  <%= link_to t("club.new"), new_admin_club_path %>
   <% @clubs.each do |club| %>
     <div class="col-sm-2 col-md-3">
       <%= link_to club_path(club) do %>
@@ -14,4 +16,5 @@
     </div>
   <% end %>
   <%= will_paginate @clubs %>
+</div>
 </div>

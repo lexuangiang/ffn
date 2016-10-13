@@ -1,4 +1,5 @@
 class Admin::PlayersController < ApplicationController
+  layout "admin_application"
   before_action :logged_in_user, :verify_admin
   before_action :find_player, except: [:create, :new, :index]
   before_action :prepare_form_data, except: [:index, :show]
@@ -19,7 +20,7 @@ class Admin::PlayersController < ApplicationController
     @player = Player.new player_params
     if @player.save
       flash[:success] = t "player.create_success"
-      redirect_to @player
+      redirect_to admin_players_path
     else
       @errors_count = @player.errors.size
       flash[:warning] = t "player.create_fail"

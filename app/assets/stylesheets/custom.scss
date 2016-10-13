@@ -327,3 +327,25 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+.col-md-2 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+sidebar content-boxbody {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f7f7f7;
+  position: relative;
+  margin: 0px;
+  font-size: 12px;
+  padding: 0px;
+}
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}

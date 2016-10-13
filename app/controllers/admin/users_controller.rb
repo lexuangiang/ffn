@@ -1,4 +1,5 @@
 class Admin::UsersController < ApplicationController
+  layout "admin_application"
   before_action :logged_in_user
   before_action :verify_admin
   before_action :load_user, only: :destroy

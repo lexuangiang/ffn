@@ -1,4 +1,5 @@
 class Admin::MatchesController < ApplicationController
+  layout "admin_application"
   before_action :logged_in_user, :verify_admin
   before_action :load_match, except: [:index, :new, :create]
   before_action :load_clubs, :load_rates, except: [:index, :show]
